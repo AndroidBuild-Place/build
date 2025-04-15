@@ -37,4 +37,4 @@ jobs:
       - name: Sync AOSP (Shallow, Clean, No Tags)
         run: |
           cd aosp/aosp-9
-          repo sync -c --depth=1 --no-tags --no-clone-bundle -j$(nproc) -c --no-tags
+          repo sync -c --no-tags --no-clone-bundle -j$(nproc)
