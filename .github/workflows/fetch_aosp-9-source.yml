@@ -30,13 +30,11 @@ jobs:
 
       - name: Initialize AOSP repo (android-9.0.0_r1)
         run: |
-          cd ˜
           mkdir -p aosp/aosp-9
           cd aosp/aosp-9
           repo init -u https://android.googlesource.com/platform/manifest -b android-9.0.0_r1 --depth=1 --partial-clone
 
       - name: Sync AOSP (Shallow, Clean, No Tags)
         run: |
-          cd ˜
           cd aosp/aosp-9
           repo sync -c --depth=1 --no-tags --no-clone-bundle -j$(nproc) -c --no-tags
