@@ -32,7 +32,7 @@ jobs:
         run: |
           mkdir -p aosp/aosp-9
           cd aosp/aosp-9
-          repo init -u https://android.googlesource.com/platform/manifest -b android-9.0.0_r1 --depth=1 --partial-clone
+          repo init -u https://github.com/enessmr/manifest -b android-9.0.0_r1 --depth=1 --partial-clone
 
       - name: Sync AOSP (Shallow, Clean, No Tags)
         run: |
